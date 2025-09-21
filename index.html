@@ -63,7 +63,7 @@
         <h2 class="section__title">Destaques da Semana</h2>
         <p class="section__subtitle">Peças selecionadas que trazem calor e personalidade para seu espaço.</p>
         <div class="products-grid" data-products-target></div>
-        <a class="scroll-more" href="#loja" aria-label="Rolar para a próxima seção">
+        <a class="scroll-more" href="#testemunhos" aria-label="Rolar para a próxima seção">
           <span class="mouse-scroll" aria-hidden="true"><span class="wheel"></span></span>
         </a>
       </div>
@@ -83,10 +83,47 @@
       </script>
     </section>
 
-    <!-- Nossa Loja Online (mockup celular com vídeo) -->
-    <section class="section section-green" id="loja" aria-label="Nossa loja online">
+    <!-- Depoimentos de Clientes -->
+    <section class="section section-green" id="testemunhos" aria-label="Depoimentos de clientes">
       <div class="container">
-        <h2 class="section__title section__title--light">Nossa Loja Online</h2>
+        <h2 class="section__title section__title--light">O que dizem nossos clientes</h2>
+        <p class="section__subtitle section__subtitle--light">Experiências reais com qualidade Cablim</p>
+
+        <div class="t-carousel" data-t-carousel data-auto="true">
+          <div class="t-track">
+            <article class="t-slide testimonial">
+              <img class="t-avatar" src="assets/cliente1.jpg" alt="Cliente 1" loading="lazy" />
+              <blockquote class="t-quote">“Entrega rápida e peças lindas! Minha sala ficou irresistível.”</blockquote>
+              <div class="t-stars" aria-label="5 de 5">★★★★★</div>
+              <div class="t-name">Ana P.</div>
+            </article>
+            <article class="t-slide testimonial">
+              <img class="t-avatar" src="assets/cliente2.jpg" alt="Cliente 2" loading="lazy" />
+              <blockquote class="t-quote">“Acabamento impecável e atendimento atencioso. Voltarei a comprar.”</blockquote>
+              <div class="t-stars" aria-label="5 de 5">★★★★★</div>
+              <div class="t-name">Rafael M.</div>
+            </article>
+            <article class="t-slide testimonial">
+              <img class="t-avatar" src="assets/cliente3.jpg" alt="Cliente 3" loading="lazy" />
+              <blockquote class="t-quote">“A curadoria combina demais com meu estilo. Super recomendo!”</blockquote>
+              <div class="t-stars" aria-label="4 de 5">★★★★☆</div>
+              <div class="t-name">Larissa C.</div>
+            </article>
+          </div>
+          <button class="t-nav t-prev" aria-label="Depoimento anterior">‹</button>
+          <button class="t-nav t-next" aria-label="Próximo depoimento">›</button>
+          <div class="t-dots" aria-hidden="true"></div>
+        </div>
+        <a class="scroll-more" href="#loja" aria-label="Rolar para a próxima seção">
+          <span class="mouse-scroll" aria-hidden="true"><span class="wheel"></span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Nossa Loja Online (mockup celular com vídeo) -->
+    <section class="section section-white" id="loja" aria-label="Nossa loja online">
+      <div class="container">
+        <h2 class="section__title">Nossa Loja Online</h2>
         <div class="phone" aria-label="Prévia da loja Cablim">
           <div class="phone__notch" aria-hidden="true"></div>
           <div class="phone__screen">
@@ -103,10 +140,10 @@
     </section>
 
     <!-- Parcerias com Arquitetos & Designers -->
-    <section class="section section-white" id="parcerias" aria-label="Parcerias com arquitetos e designers">
+    <section class="section section-green" id="parcerias" aria-label="Parcerias com arquitetos e designers">
       <div class="container">
-        <h2 class="section__title">Para Arquitetos & Designers</h2>
-        <p class="section__subtitle">Parcerias com benefícios exclusivos: condições comerciais especiais, curadoria dedicada e suporte ágil para encantar seus clientes.</p>
+        <h2 class="section__title section__title--light">Para Arquitetos & Designers</h2>
+        <p class="section__subtitle section__subtitle--light">Parcerias com benefícios exclusivos: condições comerciais especiais, curadoria dedicada e suporte ágil para encantar seus clientes.</p>
 
         <div class="partner-media">
           <img src="assets/parceiros.jpg" alt="Equipe de arquitetura e design planejando um ambiente com peças Cablim" loading="lazy" />
@@ -122,13 +159,13 @@
     </section>
 
     <!-- Projetos: Ambientação Verde -->
-    <section class="section section-green" id="projetos" aria-label="Projetos de ambientação verde">
+    <section class="section section-white" id="projetos" aria-label="Projetos de ambientação verde">
       <div class="container">
-        <h2 class="section__title section__title--light">Ambientação Verde</h2>
+        <h2 class="section__title">Ambientação Verde</h2>
         <div class="project-media">
           <img src="assets/projeto-verde.jpg" alt="Projeto de ambientação verde com vasos e móveis Cablim" loading="lazy" />
         </div>
-        <p class="section__subtitle section__subtitle--light">Projetos verdes com alma brasileira — plantas permanentes realistas, vasos e móveis rústicos para transformar qualquer ambiente.</p>
+        <p class="section__subtitle">Projetos verdes com alma brasileira — plantas permanentes realistas, vasos e móveis rústicos para transformar qualquer ambiente.</p>
         <div class="project-cta">
           <a class="btn btn-primary btn-lg" href="https://wa.me/5599999999999?text=Quero%20um%20projeto%20personalizado%20Cablim%20(ambientacao%20verde)" target="_blank" rel="noopener">Quero meu projeto personalizado</a>
         </div>
@@ -138,6 +175,46 @@
       </div>
     </section>
 
+    <!-- Footer: Links, selos e redes sociais -->
+    <footer class="footer section-green" id="footer" aria-label="Rodapé">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img class="footer__logo" src="assets/logo.svg" alt="Cablim Home Decor" />
+        </div>
+
+        <nav class="footer__nav" aria-label="Links úteis">
+          <div class="footer__col">
+            <h3 class="footer__title">Explorar</h3>
+            <a href="#destaques">Destaques</a>
+            <a href="#loja">Nossa loja</a>
+            <a href="#parcerias">Parcerias</a>
+            <a href="#projetos">Projetos</a>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__title">Institucional</h3>
+            <a href="#">Política de privacidade</a>
+            <a href="#">Termos de uso</a>
+            <a href="mailto:contato@cablim.com.br">Contato</a>
+          </div>
+        </nav>
+
+        <div class="footer__seal" aria-label="Selo de segurança">
+          <a class="seal" href="#" aria-label="Compra segura">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><path fill="currentColor" d="M12 2l8 3v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V5l8-3z"/></svg>
+          </a>
+          <small>Compra segura</small>
+        </div>
+      </div>
+      <div class="container copyright">
+        <small>© <span id="year"></span> AlvesN. Todos os direitos reservados.</small>
+      </div>
+    </footer>
+
     <script src="script.js" defer></script>
   </body>
   </html>
+
+
+
+
+

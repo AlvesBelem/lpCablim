@@ -110,3 +110,56 @@
       if (data && Array.isArray(data.items)) render(data.items);
     });
 })();
+
+// Simple testimonials carousel (one slide visible, up to 3 slides)
+(function testimonials(){
+  const car = document.querySelector('[data-t-carousel]');
+  if (!car) return;
+  const track = car.querySelector('.t-track');
+  const slides = Array.from(car.querySelectorAll('.t-slide'));
+  const prev = car.querySelector('.t-prev');
+  const next = car.querySelector('.t-next');
+  const dotsWrap = car.querySelector('.t-dots');
+  let i = 0;
+  let timer = null;
+
+  function update() {
+    const w = car.clientWidth;
+    track.style.transform = `translateX(${-i * w}px)`;
+    dotsWrap?.querySelectorAll('button').forEach((b, idx) => b.setAttribute('aria-current', String(idx === i)));
+  }
+
+  function go(n){
+    i = (n + slides.length) % slides.length;
+    update();
+  }
+
+  function auto(){
+    clearInterval(timer);
+    timer = setInterval(() => go(i+1), 5000);
+  }
+
+  // Build dots
+  if (dotsWrap) {
+    dotsWrap.innerHTML = '';
+    slides.forEach((_, idx) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.addEventListener('click', () => { go(idx); auto(); });
+      dotsWrap.appendChild(b);
+    });
+  }
+
+  prev?.addEventListener('click', () => { go(i-1); auto(); });
+  next?.addEventListener('click', () => { go(i+1); auto(); });
+  window.addEventListener('resize', update);
+
+  // Initialize
+  update();
+  auto();
+})();
+// Update year in footer
+(function(){
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
