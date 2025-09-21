@@ -672,6 +672,12 @@ body {
   background: var(--accent-3);
 }
 
+/* Hide carousel arrows on small screens */
+@media (max-width: 639px) {
+  .t-nav { display: none; }
+  .t-dots { margin-top: 10px; }
+}
+
 /* Phone mockup */
 .phone {
   width: 100%;
@@ -714,10 +720,7 @@ body {
   justify-content: center;
   margin-top: 12px;
 }
-.btn-store {
-  --btn-bg: #ffffff;
-  --btn-ink: var(--accent-3);
-}
+.btn-store { --btn-bg: var(--accent-3); --btn-ink: #ffffff; }
 
 /* Upscale phone on larger screens for better alignment */
 @media (min-width: 640px) {
@@ -772,7 +775,12 @@ body {
   justify-content: center;
   margin-top: 10px;
 }
-.project-cta .btn-primary {
-  --btn-bg: #ffffff;
-  --btn-ink: var(--accent-3);
+.project-cta .btn-primary { --btn-bg: var(--accent-3); --btn-ink: #ffffff; }
+.partner-cta .btn-primary { --btn-bg: #ffffff; --btn-ink: var(--accent-3); }
+
+/* Scroll reveal animations */
+[data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; will-change: opacity, transform; }
+.is-visible[data-reveal] { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
