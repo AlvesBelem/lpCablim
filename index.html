@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cablim Home Decor — Loja Oficial</title>
+    <meta name="description" content="Cablim Home Decor — decoração com estilo e aconchego. Conheça nossa loja." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Site Header with Logo -->
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#top" aria-label="Cablim Home Decor">
+          <img class="brand__img" src="assets/logo.svg" alt="Cablim Home Decor" />
+          <span class="sr-only">Cablim home decor</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <header class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="hero__media">
+            <div class="video-thumb video-thumb--reel" data-reel-inline data-reel-src="assets/videoreels.mp4">
+              <video class="video-inline" src="assets/videoreels.mp4" playsinline muted autoplay preload="metadata" poster="" aria-label="Reels Cablim"></video>
+              <button class="mute-toggle" type="button" aria-label="Ativar/Desativar som">
+                <span class="icon-sound" aria-hidden="true"></span>
+              </button>
+              <button class="replay-btn" type="button" aria-label="Reproduzir novamente">
+                <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="12" cy="12" r="12" fill="currentColor"/>
+                  <path d="M10 8v8l6-4-6-4z" fill="#fff"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero__note">
+            <h1 class="hero__title">Onde o rústico encontra a sofisticação, com a essência mais pura do Brasil.</h1>
+            <p class="hero__subtitle">Curadoria de peças autorais que unem materiais naturais, design atemporal e o toque artesanal brasileiro.</p>
+          </div>
+        </div>
+        <div class="hero__cta">
+          <a class="btn btn-primary btn-lg" id="cta-loja" href="https://cablim.com.br/">Conheça nossa loja</a>
+          <a class="hero__more" href="#destaques" aria-label="Rolar para os destaques">
+            <span class="mouse-scroll" aria-hidden="true">
+              <span class="wheel"></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Destaques da Semana -->
+    <section class="section section-white" id="destaques" aria-label="Destaques da semana">
+      <div class="container">
+        <h2 class="section__title">Destaques da Semana</h2>
+        <p class="section__subtitle">Peças selecionadas que trazem calor e personalidade para seu espaço.</p>
+        <div class="products-grid" data-products-target></div>
+        <a class="scroll-more" href="#loja" aria-label="Rolar para a próxima seção">
+          <span class="mouse-scroll" aria-hidden="true"><span class="wheel"></span></span>
+        </a>
+      </div>
+
+      <!-- Opcional: dados inline para edição rápida (usa se o JSON externo não carregar) -->
+      <script id="week-products" type="application/json">
+        {
+          "items": [
+            {"title": "Sofá Namoradeira Rattan", "subtitle": "A 84 x L 43 x C 148 cm", "image": "assets/sofa.jpg", "link": "https://cablim.com.br/produtos/sofa-namora-rattan-borneu-c148xl43xa84cm-20931/"},
+            {"title": "Escultura Decorativa Dourada", "subtitle": "A 26 x L 20 cm", "image": "assets/escultura.jpg", "link": "https://cablim.com.br/produtos/escultura-homem-na-base-28cm-hc22020/"},
+            {"title": "Quadro em Canvas e Tecido", "subtitle": "A 100 x L 80 cm", "image": "assets/quadro.jpg", "link": "https://cablim.com.br/produtos/quadro-decorativo-em-canvas-e-tecido-18169/"},
+            {"title": "Caixa Decorativa Texturizada", "subtitle": "A 07 x L 25 cm", "image": "assets/caixa.jpg", "link": "https://cablim.com.br/produtos/caixa-decorativa-em-polirresina-com-acabamento-texturizado-m-16379/"},
+            {"title": "Vaso Vidro Irregular", "subtitle": "A 28 x L 18 cm", "image": "assets/vaso.jpg", "link": "https://cablim.com.br/produtos/vaso-decorativo-em-vidro-transparente-design-irregular-20867/"},
+            {"title": "Espelho Orgânico Dourado", "subtitle": "A 86 x L 68 cm", "image": "assets/espelho.jpg", "link": "https://cablim.com.br/produtos/espelho-organico-em-moldura-irregular-dourada-18936/"}
+          ]
+        }
+      </script>
+    </section>
+
+    <!-- Nossa Loja Online (mockup celular com vídeo) -->
+    <section class="section section-green" id="loja" aria-label="Nossa loja online">
+      <div class="container">
+        <h2 class="section__title section__title--light">Nossa Loja Online</h2>
+        <div class="phone" aria-label="Prévia da loja Cablim">
+          <div class="phone__notch" aria-hidden="true"></div>
+          <div class="phone__screen">
+            <video class="phone__video" src="assets/loja.mp4" playsinline muted autoplay loop preload="metadata" aria-label="Vídeo da loja Cablim"></video>
+          </div>
+        </div>
+        <div class="store-cta">
+          <a class="btn btn-store btn-lg" href="https://cablim.com.br/" target="_blank" rel="noopener">Explorar loja</a>
+        </div>
+        <a class="scroll-more" href="#parcerias" aria-label="Rolar para a próxima seção">
+          <span class="mouse-scroll" aria-hidden="true"><span class="wheel"></span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Parcerias com Arquitetos & Designers -->
+    <section class="section section-white" id="parcerias" aria-label="Parcerias com arquitetos e designers">
+      <div class="container">
+        <h2 class="section__title">Para Arquitetos & Designers</h2>
+        <p class="section__subtitle">Parcerias com benefícios exclusivos: condições comerciais especiais, curadoria dedicada e suporte ágil para encantar seus clientes.</p>
+
+        <div class="partner-media">
+          <img src="assets/parceiros.jpg" alt="Equipe de arquitetura e design planejando um ambiente com peças Cablim" loading="lazy" />
+        </div>
+
+        <div class="partner-cta">
+          <a class="btn btn-primary btn-lg" href="https://wa.me/5599999999999?text=Ol%C3%A1%20Cablim%2C%20gostaria%20de%20fazer%20parceria%20(%20Arquitetos%20%26%20Designers%20)" target="_blank" rel="noopener">Quero ser parceiro</a>
+        </div>
+        <a class="scroll-more" href="#projetos" aria-label="Rolar para a próxima seção">
+          <span class="mouse-scroll" aria-hidden="true"><span class="wheel"></span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Projetos: Ambientação Verde -->
+    <section class="section section-green" id="projetos" aria-label="Projetos de ambientação verde">
+      <div class="container">
+        <h2 class="section__title section__title--light">Ambientação Verde</h2>
+        <div class="project-media">
+          <img src="assets/projeto-verde.jpg" alt="Projeto de ambientação verde com vasos e móveis Cablim" loading="lazy" />
+        </div>
+        <p class="section__subtitle section__subtitle--light">Projetos verdes com alma brasileira — plantas permanentes realistas, vasos e móveis rústicos para transformar qualquer ambiente.</p>
+        <div class="project-cta">
+          <a class="btn btn-primary btn-lg" href="https://wa.me/5599999999999?text=Quero%20um%20projeto%20personalizado%20Cablim%20(ambientacao%20verde)" target="_blank" rel="noopener">Quero meu projeto personalizado</a>
+        </div>
+        <a class="scroll-more" href="#top" aria-label="Voltar ao topo">
+          <span class="mouse-scroll" aria-hidden="true"><span class="wheel"></span></span>
+        </a>
+      </div>
+    </section>
+
+    <script src="script.js" defer></script>
+  </body>
+  </html>
